@@ -8,11 +8,17 @@ body {
   font-family: Arial, sans-serif;
   background: linear-gradient(to right, #667eea, #764ba2);
   min-height: 100vh;
+}
+
+/* Login & Register Page Wrapper */
+.auth-wrapper {
   display: flex;
   align-items: center;
   justify-content: center;
+  min-height: 100vh;
 }
 
+/* Login/Register Box */
 .container {
   background: #fff;
   padding: 40px;

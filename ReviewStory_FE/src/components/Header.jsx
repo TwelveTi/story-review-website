@@ -1,7 +1,21 @@
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+
 export default function Header() {
-  return (
-    <header className="bg-blue-600 text-white p-4 flex justify-between items-center">
-      <h1 className="text-2xl font-bold">MyReviewSite</h1>
-    </header>
-  );
+  const [searchTerm, setSearchTerm] = useState('');
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const navigate = useNavigate();
+  const username = localStorage.getItem('username') || 'User';
+  const role = localStorage.getItem('role');
+
+  const handleLogout = () => {
+    localStorage.removeItem('accessToken');
+    localStorage.removeItem('refreshToken');
+    localStorage.removeItem('username');
+    localStorage.removeItem('role');
+    navigate('/login');
+  };
+
+  if (!localStorage.getItem('accessToken')) return null;
+
 }

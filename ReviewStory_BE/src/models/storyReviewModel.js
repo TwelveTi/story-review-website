@@ -1,8 +1,7 @@
 module.exports = (sequelize, DataTypes) => {
   const StoryReview = sequelize.define('StoryReview', {
-    title: { type: DataTypes.STRING, allowNull: false },
     content: { type: DataTypes.TEXT, allowNull: false },
-    isApproved: { type: DataTypes.BOOLEAN, defaultValue: false },
+    isReported: { type: DataTypes.BOOLEAN, defaultValue: false },
     userId: { type: DataTypes.INTEGER, allowNull: false }
   }, {
     tableName: 'story_reviews'

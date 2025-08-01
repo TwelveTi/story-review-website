@@ -21,6 +21,7 @@ export default function RegisterPage() {
   };
 
   return (
+  <div className="auth-wrapper">
     <div className="container">
       <h2>Register</h2>
       {error && <p className="error-message">{error}</p>}
@@ -55,8 +56,12 @@ export default function RegisterPage() {
         <button type="submit">Register</button>
       </form>
       <div className="text-center">
-        Already have an account? <a href="/login">Login</a>
+          Already have an account?  <a href="/Login">Login</a>
       </div>
     </div>
-  );
+  </div>
+);
+
 }
+
+       
